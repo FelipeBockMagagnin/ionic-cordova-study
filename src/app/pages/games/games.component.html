@@ -1,8 +1,7 @@
-
-<div *ngFor="let item of games">
-  <ion-item class="item-label item md in-list ion-focusable hydrated">
-    <ion-avatar slot="start" class="md hydrated">
-      <img src="{{item.background_image}}">
+<ion-list style="overflow-y: auto;">
+  <ion-item *ngFor="let item of games" class="item-label item md in-list ion-focusable hydrated">
+    <ion-avatar style="width: 60px; height: 60px;" slot="start" class="md hydrated">
+      <img style="border-radius: 0px;" src="{{item.background_image}}">
     </ion-avatar>
     <ion-label class="sc-ion-label-md-h sc-ion-label-md-s md hydrated">
       <h2>{{item.name}}</h2>
@@ -10,4 +9,4 @@
       <p>Average Play Time: {{item.playtime}}</p>
     </ion-label>
   </ion-item>
-</div>
+</ion-list>
