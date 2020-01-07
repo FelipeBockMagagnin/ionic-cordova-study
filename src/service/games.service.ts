@@ -11,12 +11,6 @@ export class GamesService {
   constructor(public http: HttpClient) { }
 
   public getGames(){
-    return this.http.get('https://api.rawg.io/api/games').pipe(
-      map((data => {
-        console.log(data);
-        return data;
-      }))
-    );
+    return this.http.get('https://api.rawg.io/api/games');
   }
-
 }

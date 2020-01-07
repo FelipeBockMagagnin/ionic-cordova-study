@@ -1,13 +1,13 @@
-<div *ngFor="let item of games">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>{{item.slug}}</ion-card-subtitle>
-      <ion-card-title>{{item.name}}</ion-card-title>
-    </ion-card-header>
 
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+<div *ngFor="let item of games">
+  <ion-item class="item-label item md in-list ion-focusable hydrated">
+    <ion-avatar slot="start" class="md hydrated">
+      <img src="{{item.background_image}}">
+    </ion-avatar>
+    <ion-label class="sc-ion-label-md-h sc-ion-label-md-s md hydrated">
+      <h2>{{item.name}}</h2>
+      <h3>{{item.released}}</h3>
+      <p>Average Play Time: {{item.playtime}}</p>
+    </ion-label>
+  </ion-item>
 </div>

@@ -15,9 +15,7 @@ export class GamesComponent implements OnInit {
   ngOnInit() {    
     this.gameService.getGames().subscribe(data =>{
       this.games = data['results'];
-      console.log((data as any).results);
-
-      console.log(this.games);
+      console.log(data);
     })
   }
 
